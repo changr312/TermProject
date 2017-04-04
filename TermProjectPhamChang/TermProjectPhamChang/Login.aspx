@@ -48,7 +48,7 @@
                                 <!-- Button -->
 
                                 <div class="col-sm-12 controls">
-                                    <asp:Button ID="btnLogin" runat="server" Text="Login"  CssClass="btn btn-success"/>
+                                    <asp:Button ID="btnLogin" runat="server" Text="Login"  CssClass="btn btn-success" OnClick="btnLogin_Click"/>
                                 </div>
                             </div>
 
