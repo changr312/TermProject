@@ -19,49 +19,42 @@ namespace TermProjectPhamChang
         {
             UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             Session["login"] = "login";
-            //i eat ass
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            WebSvc.WS pxy = new WebSvc.WS();
-            string email = txtEmail.Text;
-            string name = txtName.Text;
-            string password = txtPassword.Text;
-
-            Person person = new Person();
-
-            person.PNAME = name;
-
-            BinaryFormatter serializer = new BinaryFormatter();
-            MemoryStream memStream = new MemoryStream();
-
-            serializer.Serialize(memStream, person);
-
-            byte[] byteArray;
-            byteArray = memStream.ToArray();
-
-            pxy.RegisterAcccount(email, password, byteArray);
-
-            //DBConnect connection = new DBConnect();
-            //SqlCommand objcommand = new SqlCommand();
-            //DataSet ds = new DataSet();
-
-            //objcommand.CommandType = CommandType.StoredProcedure;
-            //objcommand.CommandText = "TPinserUser";
-            //objcommand.Parameters.AddWithValue("@username", email);
-            //objcommand.Parameters.AddWithValue("@password", password);
-            //objcommand.Parameters.AddWithValue("@account", byteArray);
-
-            //connection.DoUpdateUsingCmdObj(objcommand);
-            //connection.CloseConnection();
-
-            if (cbCookie.Checked)
+            if(txtPassword.Text.Trim() == txtPassword2.Text.Trim())
             {
-                writeCookie(email, byteArray.ToString());
-            }
+                WebSvc.WS pxy = new WebSvc.WS();
+                string email = txtEmail.Text;
+                string name = txtName.Text;
+                string password = txtPassword.Text;
 
-            Response.Redirect("start.aspx");
+                Person person = new Person();
+
+                person.PNAME = name;
+
+                BinaryFormatter serializer = new BinaryFormatter();
+                MemoryStream memStream = new MemoryStream();
+
+                serializer.Serialize(memStream, person);
+
+                byte[] byteArray;
+                byteArray = memStream.ToArray();
+
+                pxy.RegisterAcccount(email, password, byteArray);
+
+                if (cbCookie.Checked)
+                {
+                    writeCookie(email, byteArray.ToString());
+                }
+
+                Response.Redirect("start.aspx");
+            }
+            else
+            {
+                lblMessage.Text = "Error. Password do not match.";
+            }
         }
 
         public void writeCookie(string email, string byteArr)

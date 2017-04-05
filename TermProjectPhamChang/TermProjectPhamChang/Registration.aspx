@@ -27,19 +27,25 @@
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
                             </div>
-                            
+
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtName" ErrorMessage="* Required" Font-Bold="False" ForeColor="Red"></asp:RequiredFieldValidator>
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
-                            </div>                            
+                            </div>
 
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="* Required" Font-Bold="False" ForeColor="Red"></asp:RequiredFieldValidator>
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                 <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" type="password" placeholder="Password"></asp:TextBox>
                             </div>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword2" ErrorMessage="* Required" Font-Bold="False" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <div style="margin-bottom: 25px" class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <asp:TextBox ID="txtPassword2" runat="server" CssClass="form-control" type="password" placeholder="Retype Password"></asp:TextBox>
+                            </div>
 
+                            <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
                             <div class="input-group">
                                 <div class="checkbox">
                                     <label>
