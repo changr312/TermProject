@@ -23,6 +23,7 @@ namespace TermProjectPhamChang
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
+            WebSvc.WS pxy = new WebSvc.WS();
             string email = txtEmail.Text;
             string name = txtName.Text;
             string password = txtPassword.Text;
@@ -39,19 +40,20 @@ namespace TermProjectPhamChang
             byte[] byteArray;
             byteArray = memStream.ToArray();
 
-            DBConnect connection = new DBConnect();
-            SqlCommand objcommand = new SqlCommand();
-            DataSet ds = new DataSet();
+            pxy.RegisterAcccount(email, password, byteArray);
 
-            objcommand.CommandType = CommandType.StoredProcedure;
-            objcommand.CommandText = "TPinserUser";
-            objcommand.Parameters.AddWithValue("@username", email);
-            objcommand.Parameters.AddWithValue("@password", password);
-            objcommand.Parameters.AddWithValue("@account", byteArray);
-      
+            //DBConnect connection = new DBConnect();
+            //SqlCommand objcommand = new SqlCommand();
+            //DataSet ds = new DataSet();
 
-            connection.DoUpdateUsingCmdObj(objcommand);
-            connection.CloseConnection();
+            //objcommand.CommandType = CommandType.StoredProcedure;
+            //objcommand.CommandText = "TPinserUser";
+            //objcommand.Parameters.AddWithValue("@username", email);
+            //objcommand.Parameters.AddWithValue("@password", password);
+            //objcommand.Parameters.AddWithValue("@account", byteArray);
+
+            //connection.DoUpdateUsingCmdObj(objcommand);
+            //connection.CloseConnection();
 
             if (cbCookie.Checked)
             {
@@ -59,29 +61,6 @@ namespace TermProjectPhamChang
             }
 
             Response.Redirect("start.aspx");
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            DBConnect connection = new DBConnect();
-            SqlCommand objcommand = new SqlCommand();
-            DataSet ds = new DataSet();
-
-            objcommand.CommandType = CommandType.StoredProcedure;
-            objcommand.CommandText = "TPselectUser";
-            objcommand.Parameters.AddWithValue("@adminID", 1);
-            connection.GetDataSetUsingCmdObj(objcommand);
-
-            Byte[] byteArray = (Byte[])connection.GetField("Account", 0);
-
-            BinaryFormatter deSerializer = new BinaryFormatter();
-            MemoryStream memStream = new MemoryStream(byteArray);
-
-            Person person = (Person)deSerializer.Deserialize(memStream);
-
-            Response.Write(person.PNAME);
-
-
         }
 
         public void writeCookie(string email, string byteArr)

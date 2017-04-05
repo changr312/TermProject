@@ -18,29 +18,26 @@
                             <div class="panel-title">Register</div>
                         </div>
 
-                        <div style="padding-top: 30px" class="panel-body">
+                        <div style="padding-top: 8px" class="panel-body">
 
                             <div style="display: none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtEmail" ErrorMessage="* Required" Font-Bold="False" ForeColor="Red"></asp:RequiredFieldValidator>
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtEmail" ErrorMessage="* Required" Font-Bold="False"></asp:RequiredFieldValidator>
-
                             </div>
-
+                            
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtName" ErrorMessage="* Required" Font-Bold="False" ForeColor="Red"></asp:RequiredFieldValidator>
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtName" ErrorMessage="* Required" Font-Bold="False"></asp:RequiredFieldValidator>
+                            </div>                            
 
-                            </div>
-
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="* Required" Font-Bold="False" ForeColor="Red"></asp:RequiredFieldValidator>
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                 <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" type="password" placeholder="Password"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="* Required" Font-Bold="False"></asp:RequiredFieldValidator>
-
                             </div>
 
                             <div class="input-group">
@@ -58,7 +55,6 @@
                                 <div class="col-sm-12 controls">
                                     <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="btn btn-success" OnClick="btnRegister_Click" />
                                     <br />
-                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
                                 </div>
                             </div>
 

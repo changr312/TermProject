@@ -42,3 +42,27 @@ C:\Users\Peter\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPham
 C:\Users\Peter\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\ClassLibraries.pdb
 C:\Users\Peter\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\Utilities.dll
 C:\Users\Peter\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\Utilities.pdb
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\csc.exe
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\vbc.exe
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\VBCSCompiler.exe
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\TermProjectPhamChang.dll.config
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\TermProjectPhamChang.dll
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\TermProjectPhamChang.pdb
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\ClassLibraries.dll
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\Utilities.dll
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\ClassLibraries.pdb
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\Utilities.pdb
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\obj\Debug\TermProjectPhamChang.csprojResolveAssemblyReference.cache
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\obj\Debug\TermProjectPhamChang.dll
+C:\Users\Newman Quach\Documents\GitHub\TermProject\TermProjectPhamChang\TermProjectPhamChang\obj\Debug\TermProjectPhamChang.pdb
