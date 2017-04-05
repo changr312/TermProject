@@ -29,22 +29,7 @@ namespace TermProjectPhamChang
 
             Person person = new Person();
 
-            person.EMAIL = email;
             person.PNAME = name;
-            person.Password = password;
-
-            DBConnect connection = new DBConnect();
-            SqlCommand objcommand = new SqlCommand();
-            DataSet ds = new DataSet();
-
-            objcommand.CommandType = CommandType.StoredProcedure;
-            objcommand.CommandText = "TPinsertUser";
-            objcommand.Parameters.AddWithValue("@email", person.EMAIL);
-            objcommand.Parameters.AddWithValue("@name", person.PNAME);
-            objcommand.Parameters.AddWithValue("@password", person.Password);
-
-            connection.DoUpdateUsingCmdObj(objcommand);
-            connection.CloseConnection();
 
             BinaryFormatter serializer = new BinaryFormatter();
             MemoryStream memStream = new MemoryStream();
@@ -54,6 +39,60 @@ namespace TermProjectPhamChang
             byte[] byteArray;
             byteArray = memStream.ToArray();
 
+            DBConnect connection = new DBConnect();
+            SqlCommand objcommand = new SqlCommand();
+            DataSet ds = new DataSet();
+
+            objcommand.CommandType = CommandType.StoredProcedure;
+            objcommand.CommandText = "TPinserUser";
+            objcommand.Parameters.AddWithValue("@username", email);
+            objcommand.Parameters.AddWithValue("@password", password);
+            objcommand.Parameters.AddWithValue("@account", byteArray);
+      
+
+            connection.DoUpdateUsingCmdObj(objcommand);
+            connection.CloseConnection();
+
+            if (cbCookie.Checked)
+            {
+                writeCookie(email, byteArray.ToString());
+            }
+
+            Response.Redirect("start.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            DBConnect connection = new DBConnect();
+            SqlCommand objcommand = new SqlCommand();
+            DataSet ds = new DataSet();
+
+            objcommand.CommandType = CommandType.StoredProcedure;
+            objcommand.CommandText = "TPselectUser";
+            objcommand.Parameters.AddWithValue("@adminID", 1);
+            connection.GetDataSetUsingCmdObj(objcommand);
+
+            Byte[] byteArray = (Byte[])connection.GetField("Account", 0);
+
+            BinaryFormatter deSerializer = new BinaryFormatter();
+            MemoryStream memStream = new MemoryStream(byteArray);
+
+            Person person = (Person)deSerializer.Deserialize(memStream);
+
+            Response.Write(person.PNAME);
+
+
+        }
+
+        public void writeCookie(string email, string byteArr)
+        {
+            HttpCookie myCookie = new HttpCookie("CIS3342_TP_Cookie");
+            myCookie.Values["email"] = email;
+            myCookie.Values["account"] = byteArr;
+            myCookie.Values["LastVisited"] = DateTime.Now.ToString();
+            myCookie.Expires = new DateTime(2025, 1, 1);
+
+            Response.Cookies.Add(myCookie);
         }
     }
 }

@@ -57,6 +57,8 @@
 
                                 <div class="col-sm-12 controls">
                                     <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="btn btn-success" OnClick="btnRegister_Click" />
+                                    <br />
+                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
                                 </div>
                             </div>
 

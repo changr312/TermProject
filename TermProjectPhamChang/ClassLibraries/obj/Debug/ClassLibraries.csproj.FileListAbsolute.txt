@@ -17,3 +17,4 @@ C:\Users\Peter\Documents\GitHub\TermProject\TermProjectPhamChang\ClassLibraries\
 C:\Users\Peter\Documents\GitHub\TermProject\TermProjectPhamChang\ClassLibraries\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Peter\Documents\GitHub\TermProject\TermProjectPhamChang\ClassLibraries\obj\Debug\ClassLibraries.dll
 C:\Users\Peter\Documents\GitHub\TermProject\TermProjectPhamChang\ClassLibraries\obj\Debug\ClassLibraries.pdb
+C:\Users\Peter\Documents\GitHub\TermProject\TermProjectPhamChang\ClassLibraries\obj\Debug\ClassLibraries.csprojResolveAssemblyReference.cache
