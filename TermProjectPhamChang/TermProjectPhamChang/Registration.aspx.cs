@@ -19,6 +19,8 @@ namespace TermProjectPhamChang
         {
             UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             Session["login"] = "login";
+            Response.Write("good to go");
+
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
