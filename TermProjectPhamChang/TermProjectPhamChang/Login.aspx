@@ -16,7 +16,7 @@
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <div class="panel-title">Sign In</div>
-<%--                            <div style="float: right; font-size: 80%; position: relative; top: -10px"><a href="#">Forgot password?</a></div>--%>
+                            <div style="float: right; font-size: 80%; position: relative; top: -10px"><a href="#">Forgot password?</a></div>
                         </div>
 
                         <div style="padding-top: 30px" class="panel-body">
@@ -25,20 +25,22 @@
 
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input type="text" class="form-control" name="email" placeholder="Email">
+                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtEmail" ErrorMessage="* Required" Font-Bold="False"></asp:RequiredFieldValidator>
 
                             </div>
 
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input id="login-password" type="password" class="form-control" name="password" placeholder="Password">
-
+                                <asp:TextBox ID="txtPassword" runat="server" type="Password" CssClass="form-control" placeholder="Password"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="* Required" Font-Bold="False"></asp:RequiredFieldValidator>
                             </div>
 
                             <div class="input-group">
                                 <div class="checkbox">
                                     <label>
-                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember Me        
+                                        <asp:CheckBox ID="cbRemember" runat="server" />
+                                        Remember Me        
                                     </label>
                                 </div>
                             </div>
@@ -48,7 +50,7 @@
                                 <!-- Button -->
 
                                 <div class="col-sm-12 controls">
-                                    <asp:Button ID="btnLogin" runat="server" Text="Login"  CssClass="btn btn-success" OnClick="btnLogin_Click"/>
+                                    <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-success" OnClick="btnLogin_Click" />
                                 </div>
                             </div>
 
@@ -57,7 +59,7 @@
                                     <div style="border-top: 1px solid#888; padding-top: 15px; font-size: 85%">
                                         Don't have an account? 
                                             <a href="Registration.aspx">Register Here
-                                        </a>
+                                            </a>
                                     </div>
                                 </div>
                             </div>

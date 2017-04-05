@@ -78,6 +78,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="start.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +104,23 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="start.aspx.cs">
+      <DependentUpon>start.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="start.aspx.designer.cs">
+      <DependentUpon>start.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraries\ClassLibraries.csproj">
+      <Project>{18a99b3a-d3a7-40a3-a374-d854189abbba}</Project>
+      <Name>ClassLibraries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{6edd1a0e-4d30-4a0d-b638-b7865f82d811}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

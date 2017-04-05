@@ -11,12 +11,13 @@ namespace TermProjectPhamChang
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            Session["login"] = "login";
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Response.Write("hi");
+           
         }
     }
 }
