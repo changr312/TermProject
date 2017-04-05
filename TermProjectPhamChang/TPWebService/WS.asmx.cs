@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using Utilities;
+using ClassLibraries;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace TPWebService
 {
@@ -16,11 +20,21 @@ namespace TPWebService
     // [System.Web.Script.Services.ScriptService]
     public class WS : System.Web.Services.WebService
     {
-
         [WebMethod]
-        public string HelloWorld()
+        public void RegisterAcccount(string email, string password, byte[] byteArray)
         {
-            return "Hello World";
+            DBConnect connection = new DBConnect();
+            SqlCommand objcommand = new SqlCommand();
+            DataSet ds = new DataSet();
+
+            objcommand.CommandType = CommandType.StoredProcedure;
+            objcommand.CommandText = "TPinserUser";
+            objcommand.Parameters.AddWithValue("@username", email);
+            objcommand.Parameters.AddWithValue("@password", password);
+            objcommand.Parameters.AddWithValue("@account", byteArray);
+
+            connection.DoUpdateUsingCmdObj(objcommand);
+            connection.CloseConnection();
         }
     }
 }
