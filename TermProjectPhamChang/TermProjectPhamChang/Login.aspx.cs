@@ -14,6 +14,7 @@ namespace TermProjectPhamChang
             UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             Session["login"] = "login";
             Response.Write("fuck me");
+            Response.Write("fuck me too");
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
