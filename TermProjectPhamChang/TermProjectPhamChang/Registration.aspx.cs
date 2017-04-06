@@ -19,7 +19,6 @@ namespace TermProjectPhamChang
         {
             UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             Session["login"] = "login";
-            Response.Write("fuck harsh and fuck supreme");
 
         }
 
