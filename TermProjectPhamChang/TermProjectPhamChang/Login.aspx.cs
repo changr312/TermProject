@@ -13,7 +13,7 @@ namespace TermProjectPhamChang
         {
             UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             Session["login"] = "login";
-            Response.Write("fuck");
+            Response.Write("fuck me");
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
